@@ -11,3 +11,5 @@ Burada keras ile eğitilen bir modeli kullandık. Diğer çoğu modelde, openCV 
 Keras kullanabilmek için;
  - pip install tensor-flow
  - pip install keras
+
+Dokümantasyon: https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html
