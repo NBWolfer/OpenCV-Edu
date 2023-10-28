@@ -1,0 +1,4 @@
+0 Books
+1 Human
+2 Hands
+3 Room

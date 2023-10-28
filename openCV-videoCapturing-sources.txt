@@ -1,0 +1,13 @@
+Bu dosya, openCV kütüphanesinde video işlemek için kullanılan VideoCapture ve VideoWriter nesnelerinin kullan��mını göstermektedir.
+
+VideoCapture nesnesi, bir videoyu okumak için kullanılır. VideoWriter nesnesi ise bir videoyu kaydetmek için kullanılır;
+
+ - VideoCapture nesnesi, görüntü kaynağı olarak bir video dosyasını, bir kamerayı veya bir akışı kullanabilir.
+ - VideoWriter nesnesi, görüntü kaynağı olarak bir video dosyasını kullanır.
+
+
+Burada keras ile eğitilen bir modeli kullandık. Diğer çoğu modelde, openCV ile kullanım mümkündür.
+
+Keras kullanabilmek için;
+ - pip install tensor-flow
+ - pip install keras
