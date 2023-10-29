@@ -1,4 +1,4 @@
-# openCV-Video-Edu
+# OpenCV-Video-Edu
 OpenCV ile video uygulamaları
 
 Gereklilikler;
@@ -7,3 +7,6 @@ Gereklilikler;
 - pip install tensorflow
 - pip install keras
 - pip install opencv-python
+
+Python Sürümü: 3.11.x
+OpenCV Sürümü: 4.x
