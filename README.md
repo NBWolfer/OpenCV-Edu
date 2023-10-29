@@ -8,5 +8,5 @@ Gereklilikler;
 - pip install keras
 - pip install opencv-python
 
-Python Sürümü: 3.11.x
-OpenCV Sürümü: 4.x
+* Python Sürümü: 3.11.x
+* OpenCV Sürümü: 4.x
