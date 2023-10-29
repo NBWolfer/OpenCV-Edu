@@ -20,7 +20,7 @@ while True:
     frame = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
 
     # Veya çerçeveyi ters çevirmek için:
-    frame = cv.flip(frame, 0)
+    frame = cv.flip(frame, 1)
 
     # Çerçeveyi kaydedin
     out.write(frame)
