@@ -1,0 +1,25 @@
+img = cv.imread('/kaggle/input/test-images/chicago_skyline_16x9.jpg')
+img_o = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+
+img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+
+alpha = 2  # Kontrast artırma faktörü (1'den büyük bir değer)
+beta = 10    # Parlaklık artırma değeri (0 ile 100 arasında bir değer)
+img = cv.convertScaleAbs(img, alpha=alpha, beta=beta)
+
+d = 10
+sigmaColor = 60
+sigmaSpace = 60 
+img = cv.bilateralFilter(img, d,sigmaColor,sigmaSpace)
+
+
+reflect = cv.copyMakeBorder(img,130,50,10,10,cv.BORDER_REFLECT)
+
+
+plt.figure(figsize=(20,10))
+plt.subplot(231)
+plt.imshow(reflect)
+plt.subplot(232)
+plt.imshow(img_o)
+
+cv.imwrite('/kaggle/working/odev_result_chicago.jpg',reflect)
