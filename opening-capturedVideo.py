@@ -1,5 +1,6 @@
 import numpy as np
 import cv2 as cv
+from datetime import datetime
 
 cap = cv.VideoCapture('./output.mp4')
 
@@ -10,6 +11,9 @@ if not cap.isOpened():
     exit()
 
 while cap.isOpened():
+    # fps yi ne kadar olacağını belirlemek için
+    # zaman ölçme
+    t1 = datetime.now()    
     ret, frame = cap.read()
     
     print(ret, frame)
@@ -20,8 +24,9 @@ while cap.isOpened():
         break
     
     cv.imshow('frame', frame)
-    
-    if cv.waitKey(1) == ord('q'):
+    t2 = datetime.now()
+    print((t2-t1)*1000)
+    if cv.waitKey(8) == ord('q'): # ölçülen zamana göre waitKey() için değer belirleme
         break
 
 cap.release()

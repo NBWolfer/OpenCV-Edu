@@ -19,7 +19,7 @@ while True:
     ret, image = camera.read()
 
     image = cv.flip(image, 1)
-
+    print(image)
     # Resmi yeniden boyutlandırma
     image_ = cv.resize(image, (224, 224), interpolation=cv.INTER_AREA)
     image_ = cv.flip(image_, 1)
@@ -27,8 +27,13 @@ while True:
     # Resmi model için uygun hale getir
     image_ = np.asarray(image_, dtype=np.float32).reshape(1, 224, 224, 3)
 
-    # Resim dizisini 0 ile 1 arasında normalleştir
-    image_ = (image_ / 127.5) - 1
+    # Min-Max normalleştirme işlemi
+    # Resim dizisini -1 ile 1 arasında normalleştir
+    # Bu sayede rgb kodları [-1,1] aralığında temsil edilir  | [0,1] aralığı da kullanılır
+    # Resimleri bir standarta sokmak eğitim esnasında daha iyi istikrar sağlar
+    # Daha hızlı işlemeye yardımcı olur
+    image_ = (image_ / 127.5) - 1 
+    print(image_)
 
     # Modeli kullanarak tahmin yap
     prediction = model.predict(image_)

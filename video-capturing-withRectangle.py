@@ -13,6 +13,8 @@ while True:
     if not ret:
         break
 
+    # Burada bir model ile çalışılırken dikdörtgenin ölçüleri ve konumu
+    # bu modelin çıktıları ile ayarlanır
     rectangle_x, rectangle_y, rectangle_width, rectangle_height = 100, 100, 340, 280
     cv.rectangle(frame, (rectangle_x, rectangle_y), (rectangle_x+rectangle_height, rectangle_y+rectangle_width), (0, 255, 0), 2)
     cv.putText(frame, 'Rectangle', (rectangle_x, rectangle_y-10), cv.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
